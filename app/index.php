@@ -10,7 +10,7 @@ use Ridouchire\RadioMetrics\DataCollector;
 
 $current_data = [];
 
-$handler = new StreamHandler(__DIR__ . '/logs/general.log', Level::Debug);
+$handler = new StreamHandler(__DIR__ . '/logs/general.log', Level::Info);
 
 $logger = new Logger('metrics');
 $logger->pushHandler($handler);
@@ -32,7 +32,7 @@ Loop::addPeriodicTimer(1, function () use ($logger, &$current_data) {
         $current_data = $data;
 
         $logger->debug("Данные изменились, обновляю лог");
-        $logger->info("data", $current_data);
+        $logger->info("Слушателей: {$current_data['listeners']}, трек: {$current_data['track']}");
     } else {
         $logger->debug("Данные не менялись");
     }
