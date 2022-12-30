@@ -37,7 +37,7 @@ class DataCollector
         /** @var string */
         $track     = $dom->find('.yellowkeys tbody tr', 7)->text;
         $listeners = substr($listeners, 20);
-        $track     = substr($track, 17);
+        $track     = substr($track, 18);
 
         //TODO: имя плейлиста из имени потока, когда куги сурс-клиентом будет его устанавливать
 
