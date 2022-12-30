@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  metrics:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    container_name: radio-metrics
+    restart: always
+    volumes:
+      - './logs:/usr/local/share/metrics/logs'

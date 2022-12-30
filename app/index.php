@@ -10,7 +10,7 @@ use Ridouchire\RadioMetrics\DataCollector;
 
 $current_data = [];
 
-$handler = new StreamHandler(__DIR__ . '/general.log', Level::Debug);
+$handler = new StreamHandler(__DIR__ . '/logs/general.log', Level::Debug);
 
 $logger = new Logger('metrics');
 $logger->pushHandler($handler);
