@@ -8,4 +8,4 @@ services:
     container_name: radio-metrics
     restart: always
     volumes:
-      - './umechan/logs:/usr/local/share/metrics/logs'
+      - '../umechan/logs:/usr/local/share/metrics/logs'
